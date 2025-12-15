@@ -768,7 +768,25 @@ ssh-keygen -t ed25519 -C "kermit@workshop"
 
 ---
 
-## XI. Future Extensions
+## XI. Federated Fork Architecture (Extension)
+
+**For federated fork scenarios** (each partner owns their fork, upstream subscription for updates), see:
+
+`system/tomes/partnership/lore/architecture/on_federated_fork_synchronization.md`
+
+This extension covers:
+- When to use federated forks vs. shared repository
+- Git remote configuration (`origin` + `upstream`)
+- Sync strategies (`fetch_on_entry`, `before_synthesis`, `manual`, `daily`)
+- Fetch/merge workflow for bidirectional synchronization
+- Spirit duties for alerting on new upstream commits
+- Registry schema extensions (`upstream`, `sync_strategy`, per-participant `fork` URLs)
+
+**Key difference:** Standard portals use single shared `origin`. Federated forks add `upstream` remote pointing to partner's fork.
+
+---
+
+## XII. Future Extensions
 
 **Phase 2 (Near-term):**
 - Portal discovery mechanism (how Mages find each other)
